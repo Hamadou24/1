@@ -43,6 +43,7 @@ body {
   padding: 14px 0;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 700; }
+.brand-logo { width: 28px; height: 28px; display: block; }
 .brand-mark { color: #ffd166; filter: drop-shadow(0 0 10px rgba(255,209,102,0.5)); }
 .brand-text strong { color: var(--primary); }
 

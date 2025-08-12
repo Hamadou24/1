@@ -7,6 +7,21 @@ const listings = [
   { id: 5, name: "Garage AutoPro", category: "Garage", city: "Marseille", rating: 4.2, premium: false, phone: "+33 4 91 00 00 05", website: "https://autopro.example", email: "contact@autopro.example" },
   { id: 6, name: "Maison Gourmande", category: "Restaurant", city: "Paris", rating: 4.8, premium: true, phone: "+33 1 42 00 00 06", website: "https://maison-gourmande.example", email: "bonjour@maison-gourmande.example" },
   { id: 7, name: "Studio Yoga Zen", category: "Sport & Bien-être", city: "Nantes", rating: 4.5, premium: false, phone: "+33 2 40 00 00 07", website: "https://yogazen.example", email: "hello@yogazen.example" },
+  { id: 8, name: "TechSOS Informatique", category: "Informatique", city: "Toulouse", rating: 4.6, premium: true, phone: "+33 5 61 00 00 08", website: "https://techsos.example", email: "contact@techsos.example" },
+  { id: 9, name: "Cabinet Avocat Rivière", category: "Avocat", city: "Nice", rating: 4.3, premium: false, phone: "+33 4 93 00 00 09", website: "https://avocat-riviere.example", email: "accueil@avocat-riviere.example" },
+  { id: 10, name: "Docteur SantéPlus", category: "Médecin", city: "Rennes", rating: 4.7, premium: true, phone: "+33 2 23 00 00 10", website: "https://santeplus.example", email: "rdv@santeplus.example" },
+  { id: 11, name: "Pharmacie Centrale", category: "Pharmacie", city: "Strasbourg", rating: 4.5, premium: false, phone: "+33 3 88 00 00 11", website: "https://pharmacie-centrale.example", email: "info@pharmacie-centrale.example" },
+  { id: 12, name: "Hôtel Bleu Azur", category: "Hôtel", city: "Montpellier", rating: 4.4, premium: true, phone: "+33 4 67 00 00 12", website: "https://bleu-azur.example", email: "resa@bleu-azur.example" },
+  { id: 13, name: "Café des Arts", category: "Café", city: "Dijon", rating: 4.2, premium: false, phone: "+33 3 80 00 00 13", website: "https://cafedesarts.example", email: "hello@cafedesarts.example" },
+  { id: 14, name: "Pâtisserie Douceur", category: "Pâtisserie", city: "Grenoble", rating: 4.9, premium: true, phone: "+33 4 76 00 00 14", website: "https://patisserie-douceur.example", email: "bonjour@patisserie-douceur.example" },
+  { id: 15, name: "Fromagerie du Coin", category: "Fromagerie", city: "Reims", rating: 4.6, premium: false, phone: "+33 3 26 00 00 15", website: "https://fromagerie-du-coin.example", email: "contact@fromagerie-du-coin.example" },
+  { id: 16, name: "Fleuriste Les Lilas", category: "Fleuriste", city: "Toulon", rating: 4.5, premium: false, phone: "+33 4 94 00 00 16", website: "https://leslilas.example", email: "bonjour@leslilas.example" },
+  { id: 17, name: "Librairie Page Blanche", category: "Librairie", city: "Angers", rating: 4.8, premium: true, phone: "+33 2 41 00 00 17", website: "https://pageblanche.example", email: "contact@pageblanche.example" },
+  { id: 18, name: "Bar Le Comptoir", category: "Bar", city: "Clermont-Ferrand", rating: 4.1, premium: false, phone: "+33 4 73 00 00 18", website: "https://lecomptoir.example", email: "hello@lecomptoir.example" },
+  { id: 19, name: "Traiteur Saveurs d'Ici", category: "Traiteur", city: "Nîmes", rating: 4.7, premium: true, phone: "+33 4 66 00 00 19", website: "https://saveursdici.example", email: "devis@saveursdici.example" },
+  { id: 20, name: "Électricien VoltFast", category: "Électricien", city: "Villeurbanne", rating: 4.3, premium: false, phone: "+33 4 72 00 00 20", website: "https://voltfast.example", email: "contact@voltfast.example" },
+  { id: 21, name: "Menuiserie Bois Noble", category: "Menuiserie", city: "Saint-Étienne", rating: 4.6, premium: false, phone: "+33 4 77 00 00 21", website: "https://boisnoble.example", email: "bonjour@boisnoble.example" },
+  { id: 22, name: "Opticien ClairVue", category: "Opticien", city: "Nice", rating: 4.5, premium: true, phone: "+33 4 93 00 00 22", website: "https://clairvue.example", email: "rdv@clairvue.example" }
 ];
 
 /* Elements */
