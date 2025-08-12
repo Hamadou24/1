@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Annuaire Local Premium – Trouvez les meilleurs pros près de chez vous</title>
+    <meta name="description" content="Annuaire local premium: recherchez des restaurants, artisans, commerces et services par ville et catégorie. Entreprises vérifiées, mises en avant Premium." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/styles.css" />
+
+    <meta property="og:title" content="Annuaire Local Premium" />
+    <meta property="og:description" content="Trouvez des entreprises locales de confiance. Recherchez par ville et catégorie, découvrez les établissements Premium." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+
+    <script type="application/ld+json" id="jsonld-website">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Annuaire Local Premium",
+        "url": "https://example.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://example.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json" id="jsonld-listing"></script>
+  </head>
+  <body>
+    <noscript>Activez JavaScript pour utiliser la recherche et les filtres.</noscript>
+
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="#" class="brand" aria-label="Accueil Annuaire Local Premium">
+          <span class="brand-mark">★</span>
+          <span class="brand-text">Annuaire Local <strong>Premium</strong></span>
+        </a>
+        <nav class="header-actions" aria-label="Actions principales">
+          <button id="openAddModalBtn" class="btn btn-primary">Ajouter votre entreprise</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-search">
+        <div class="container">
+          <h1>Trouvez les meilleurs professionnels près de chez vous</h1>
+          <p class="subtitle">Recherchez par nom, catégorie ou ville. Les annonces <strong>Premium</strong> apparaissent en tête.</p>
+
+          <form id="searchForm" class="search-form" role="search" aria-label="Recherche dans l'annuaire" onsubmit="return false;">
+            <div class="field">
+              <label for="searchInput" class="visually-hidden">Recherche</label>
+              <input id="searchInput" type="search" placeholder="Que cherchez-vous ? (ex: pizza, plombier, coiffeur)" autocomplete="off" />
+            </div>
+            <div class="field">
+              <label for="categorySelect" class="visually-hidden">Catégorie</label>
+              <select id="categorySelect" aria-label="Filtre par catégorie"></select>
+            </div>
+            <div class="field">
+              <label for="citySelect" class="visually-hidden">Ville</label>
+              <select id="citySelect" aria-label="Filtre par ville"></select>
+            </div>
+            <div class="field">
+              <label for="sortSelect" class="visually-hidden">Tri</label>
+              <select id="sortSelect" aria-label="Trier les résultats">
+                <option value="relevance">Pertinence</option>
+                <option value="rating">Note décroissante</option>
+                <option value="name">Nom A→Z</option>
+              </select>
+            </div>
+            <div class="field checkbox">
+              <input id="premiumOnly" type="checkbox" />
+              <label for="premiumOnly">Premium uniquement</label>
+            </div>
+          </form>
+
+          <div class="results-meta" aria-live="polite">
+            <span id="resultsCount">0 résultats</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="results">
+        <div class="container">
+          <div id="resultsGrid" class="grid" role="list" aria-label="Résultats de recherche"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div>
+          <div class="brand-inline"><span class="brand-mark">★</span> Annuaire Local <strong>Premium</strong></div>
+          <p class="muted">Annuaire de confiance pour découvrir les meilleures entreprises près de chez vous.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#" id="footerAddBusiness">Ajouter votre entreprise</a>
+          <a href="#">Devenir Premium</a>
+          <a href="#">Contact</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="addBusinessModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="addBusinessTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-card" role="document">
+        <div class="modal-header">
+          <h2 id="addBusinessTitle">Ajouter votre entreprise</h2>
+          <button class="icon-btn" id="closeAddModalBtn" aria-label="Fermer">✕</button>
+        </div>
+        <form id="addBusinessForm" class="modal-body">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="bizName">Nom de l'entreprise</label>
+              <input id="bizName" name="name" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="bizCategory">Catégorie</label>
+              <input id="bizCategory" name="category" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="bizCity">Ville</label>
+              <input id="bizCity" name="city" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="bizPhone">Téléphone</label>
+              <input id="bizPhone" name="phone" type="tel" />
+            </div>
+            <div class="form-field">
+              <label for="bizWebsite">Site web</label>
+              <input id="bizWebsite" name="website" type="url" placeholder="https://" />
+            </div>
+            <div class="form-field">
+              <label for="bizEmail">Email</label>
+              <input id="bizEmail" name="email" type="email" />
+            </div>
+            <div class="form-field checkbox">
+              <input id="bizPremium" name="premium" type="checkbox" />
+              <label for="bizPremium">Demander l'option Premium</label>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn" id="cancelAddModalBtn">Annuler</button>
+            <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+          </div>
+          <p class="muted small">Vos informations seront utilisées pour vous contacter et vérifier votre fiche. Aucune publication automatique.</p>
+        </form>
+      </div>
+    </div>
+
+    <script src="./assets/app.js" defer></script>
+  </body>
+</html>
